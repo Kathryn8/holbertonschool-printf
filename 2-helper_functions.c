@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strlen - length of a string
@@ -51,8 +52,14 @@ void (*get_func(char *s))(va_list);
 	int i;
 
 	i = 0;
-	while(fspecs[i].specifier != NULL)
+	while (fspecs[i].specifier != NULL)
 	{
-		if ()
+		if (_strcmp(fspecs[i].specifier, s) == 0)
+		{
+			return (fspec[i].f);
+		}
 		i = i + 1;
 	}
+	_putchar("N\n");
+	exit(1);
+}
