@@ -17,7 +17,7 @@ void print_int(va_list ap);
 void print_decimal(va_list ap);
 /* 2-helper_functions.c */
 int _strlen(char *s);
-void (*get_fmat_spec(char *s))(va_list);
+void (*get_func(char *s))(va_list);
 /* 3-helper_functions.c */
 /* 4-helper_functions.c */
 
