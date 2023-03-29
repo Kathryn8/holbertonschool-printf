@@ -15,12 +15,24 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
+/**
+ * print_char - prints a char
+ * @ap: user input
+ *
+ * Return: number of characters printed
+ */
 int print_char(va_list ap)
 {
 	_putchar(va_arg(ap, int));
 	return (1);
 }
 
+/**
+ * print_str - prints a string
+ * @ap: user input
+ *
+ * Return: number of characters printed
+ */
 int print_str(va_list ap)
 {
 	char *str = va_arg(ap, char *);
@@ -34,6 +46,12 @@ int print_str(va_list ap)
 	return (i);
 }
 
+/**
+ * print_int - prints an integer
+ * @ap: user input
+ *
+ * Return: number of characters printed
+ */
 int print_int(va_list ap)
 {
 	int x = va_arg(ap, int);
@@ -73,6 +91,12 @@ int print_int(va_list ap)
 	return (count);
 }
 
+/**
+ * print_decimal - prints a decimal
+ * @ap: user input
+ *
+ * Return: number of characters printed
+ */
 int print_decimal(va_list ap)
 {
 	int x = va_arg(ap, int);

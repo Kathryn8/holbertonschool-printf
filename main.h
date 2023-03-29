@@ -4,15 +4,27 @@
 #include <stdarg.h>
 /* Declaration of typedef structs: */
 
+/**
+ * struct char_string - connects a char to a string
+ *
+ * @c: a character, c,s,i or d
+ * @str: a string
+ */
 typedef struct char_string
 {
 	char c;
 	char *str;
-} csid_t; // this struct is o match 'c' -> "%c", 's' -> "%s" etc...
+} csid_t;
 
+/**
+ * struct format_specs - format specifiers and connected function
+ *
+ * @specifier: such as those found in format string
+ * @f: The function associated
+ */
 typedef struct format_specs
 {
-	char *specifier; //eg "%s" "%c" "%i" "%d'.
+	char *specifier;
 	int (*f)(va_list);
 } spec_t;
 

@@ -69,4 +69,5 @@ int (*get_func(char *s))(va_list)
 		}
 		i = i + 1;
 	}
+	return (0);
 }
