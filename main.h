@@ -1,13 +1,23 @@
 #ifndef __MAIN_H__
 #define __MAIN_H__
 
-/* List of prototypes and their respective declaration files */
+#include <stdarg.h>
+/* Declaration of typedef structs: */
+
+typedef struct char_string
+{
+	char c;
+	char *str;
+} csid_t; // this struct is o match 'c' -> "%c", 's' -> "%s" etc...
 
 typedef struct format_specs
 {
 	char *specifier; //eg "%s" "%c" "%i" "%d'.
-	void (*f)(va_list)
+	void (*f)(va_list);
 } spec_t;
+
+/* List of prototypes and their respective declaration files */
+int _printf(const char *format, ...);
 
 /* 1-helper_functions.c */
 int _putchar(char c);
