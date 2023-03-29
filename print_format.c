@@ -46,10 +46,15 @@ int _printf(const char *format, ...)
 				}
 				j = j + 1;
 			}
-			if (k == 0)
+			if (k == 0 && format[i + 1] == '%')
 			{
 				_putchar('%');
 				ret_value = ret_value + 1;
+				i = i + 1;
+			}
+			else
+			{
+				ret_value = -1;
 			}
 		}
 		else
