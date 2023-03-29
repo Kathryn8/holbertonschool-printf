@@ -16,6 +16,8 @@ int _printf(const char *format, ...)
 	va_list ap;
 	int i;
 	int j;
+	int k;
+	int ret_value;
 	csid_t match[] = {
 		{'c', "%c"},
 		{'s', "%s"},
@@ -26,28 +28,38 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 	i = 0;
+	ret_value = 0;
 	while (format[i] != '\0') // loop over format string
 	{
-		j = 0;
-		while (match[j].c != '\0') // loop over the match struct
+		if (format[i] == '%')
 		{
-			if ((format[i] == '%') && (format[i + 1] == match[j].c))
+			j = 0;
+			k = 0;
+			while (match[j].c != '\0')
 			{
-				get_func(match[j].str)(ap); // prints variable
-				i = i + 2;
-				break;
+				if (format[i + 1] == match[j].c)
+				{
+					get_func(match[j].str)(ap); // prints variable
+					i = i + 1;
+					k = 1;
+					ret_value = ret_value + 1;
+					break;
+				}
+				j = j + 1;
 			}
-			else if ((format[i] == '%') && (format[i + 1] != match[j].c))
+			if (k == 0)
 			{
 				_putchar('%');
-				i = i + 1;
-				break;
+				ret_value = ret_value + 1;
 			}
-			else
-			j = j + 1;
 		}
-		_putchar(format[i]);
+		else
+		{
+			_putchar(format[i]);
+			ret_value = ret_value + 1;
+		}
 		i = i + 1;
 	}
 	va_end(ap);
+	return (ret_value);
 }
