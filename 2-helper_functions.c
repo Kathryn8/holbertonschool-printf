@@ -46,9 +46,9 @@ int _strcmp(char *s1, char *s2)
  *  from a struct
  * @s: string of the format specifier eg. "%c",or "%s"
  *
- * Return: void
+ * Return: number of characters printed
  */
-void (*get_func(char *s))(va_list)
+int (*get_func(char *s))(va_list)
 {
 	spec_t fspecs[] = {
 		{"%c", print_char},
@@ -69,6 +69,4 @@ void (*get_func(char *s))(va_list)
 		}
 		i = i + 1;
 	}
-	_putchar('N');
-	_putchar('\n');
 }

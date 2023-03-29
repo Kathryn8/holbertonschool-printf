@@ -15,12 +15,13 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
-void print_char(va_list ap)
+int print_char(va_list ap)
 {
 	_putchar(va_arg(ap, int));
+	return (1);
 }
 
-void print_str(va_list ap)
+int print_str(va_list ap)
 {
 	char *str = va_arg(ap, char *);
 	int i = 0;
@@ -30,19 +31,22 @@ void print_str(va_list ap)
 		_putchar(str[i]);
 		i = i + 1;
 	}
+	return (i);
 }
 
-void print_int(va_list ap)
+int print_int(va_list ap)
 {
 	int x = va_arg(ap, int);
 	int z = 0;
 	int i = 1000000000;
 	int k = 0;
+	int count = 0;
 
 	if (x < 0)
 	{
 		_putchar('-');
 		x = x * (-1);
+		count = count + 1;
 	}
 	while (i > 0)
 	{
@@ -51,6 +55,7 @@ void print_int(va_list ap)
 			if (k == 1)
 			{
 				_putchar('0');
+				count = count + 1;
 			}
 			i = i / 10;
 		}
@@ -62,21 +67,25 @@ void print_int(va_list ap)
 			i = i / 10;
 			k = 1;
 			_putchar(z + '0');
+			count = count + 1;
 		}
 	}
+	return (count);
 }
 
-void print_decimal(va_list ap)
+int print_decimal(va_list ap)
 {
 	int x = va_arg(ap, int);
 	int z = 0;
 	int i = 1000000000;
 	int k = 0;
+	int count = 0;
 
 	if (x < 0)
 	{
 		_putchar('-');
 		x = x * (-1);
+		count = count + 1;
 	}
 	while (i > 0)
 	{
@@ -85,6 +94,7 @@ void print_decimal(va_list ap)
 			if (k == 1)
 			{
 				_putchar('0');
+				count = count + 1;
 			}
 			i = i / 10;
 		}
@@ -96,6 +106,8 @@ void print_decimal(va_list ap)
 			i = i / 10;
 			k = 1;
 			_putchar(z + '0');
+			count = count + 1;
 		}
 	}
+	return (count);
 }
