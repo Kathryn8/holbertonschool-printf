@@ -54,12 +54,18 @@ int print_str(va_list ap)
  */
 int print_int(va_list ap)
 {
-	int x = va_arg(ap, int);
+	long int x = va_arg(ap, int);
 	int z = 0;
-	int i = 1000000000;
+	long int i = 10000000000;
 	int k = 0;
 	int count = 0;
 
+	if (x == 0)
+	{
+		_putchar(x + '0');
+		count = count + 1;
+		return (count);
+	}
 	if (x < 0)
 	{
 		_putchar('-');
@@ -99,12 +105,18 @@ int print_int(va_list ap)
  */
 int print_decimal(va_list ap)
 {
-	int x = va_arg(ap, int);
+	long int x = va_arg(ap, int);
 	int z = 0;
-	int i = 1000000000;
+	long int i = 10000000000;
 	int k = 0;
 	int count = 0;
 
+	if (x == 0)
+	{
+		_putchar(x + '0');
+		count = count + 1;
+		return (count);
+	}
 	if (x < 0)
 	{
 		_putchar('-');
