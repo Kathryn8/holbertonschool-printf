@@ -39,10 +39,9 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == match[j].c)
 				{
-					get_func(match[j].str)(ap); // prints variable
+					ret_value += get_func(match[j].str)(ap);
 					i = i + 1;
 					k = 1;
-					ret_value = ret_value + 1;
 					break;
 				}
 				j = j + 1;
