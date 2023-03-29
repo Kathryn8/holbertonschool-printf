@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stddef.h>
-
+#include <stdarg.h>
+#include <stdlib.h>
 /**
  * _strlen - length of a string
  * @s: takes parameter pointer to a char
@@ -39,7 +40,15 @@ int _strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
-void (*get_func(char *s))(va_list);
+
+/**
+ * get_func - pointer to a function that will extract the corralating function
+ *  from a struct
+ * @s: string of the format specifier eg. "%c",or "%s"
+ *
+ * Return: void
+ */
+void (*get_func(char *s))(va_list)
 {
 	spec_t fspecs[] = {
 		{"%c", print_char},
@@ -56,10 +65,10 @@ void (*get_func(char *s))(va_list);
 	{
 		if (_strcmp(fspecs[i].specifier, s) == 0)
 		{
-			return (fspec[i].f);
+			return (fspecs[i].f);
 		}
 		i = i + 1;
 	}
-	_putchar("N\n");
-	exit(1);
+	_putchar('N');
+	_putchar('\n');
 }
