@@ -5,26 +5,15 @@
 /* Declaration of typedef structs: */
 
 /**
- * struct char_string - connects a char to a string
- *
- * @c: a character, c,s,i or d
- * @str: a string
- */
-typedef struct char_string
-{
-	char c;
-	char *str;
-} csid_t;
-
-/**
  * struct format_specs - format specifiers and connected function
  *
  * @specifier: such as those found in format string
  * @f: The function associated
  */
+
 typedef struct format_specs
 {
-	char *specifier;
+	char specifier;
 	int (*f)(va_list);
 } spec_t;
 
@@ -40,7 +29,8 @@ int print_decimal(va_list ap);
 /* 2-helper_functions.c */
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
-int (*get_func(char *s))(va_list);
+int (*get_func(char s))(va_list);
+int print_percent(__attribute__((unused))va_list ap);
 /* 3-helper_functions.c */
 /* 4-helper_functions.c */
 

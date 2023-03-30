@@ -15,15 +15,8 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int i;
-	int j;
 	int ret_value;
-	csid_t match[] = {
-		{'c', "%c"},
-		{'s', "%s"},
-		{'i', "%i"},
-		{'d', "%d"},
-		{'\0', NULL}
-	};
+	int (*p)(va_list);
 
 	ret_value = 0;
 	va_start(ap, format);
@@ -37,26 +30,17 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			j = 0;
-			while (match[j].c != '\0')
+			p = get_func(format[i + 1]);
+
+			if (p == NULL)
 			{
-				if (format[i + 1] == match[j].c)
-				{
-					ret_value = ret_value + get_func(match[j].str)(ap);
-					i = i + 1;
-					break;
-				}
-				else if (format[i + 1] == '%')
-				{
-					_putchar('%');
-					ret_value = ret_value + 1;
-					i = i + 1;
-					break;
-				}
-				else
-				{
-					j = j + 1;
-				}
+				_putchar(format[i]);
+				ret_value = ret_value + 1;
+			}
+			else
+			{
+				ret_value = ret_value + p(ap);
+				i = i + 1;
 			}
 		}
 		i = i + 1;
