@@ -38,6 +38,11 @@ int print_str(va_list ap)
 	char *str = va_arg(ap, char *);
 	int i = 0;
 
+	if(str == (char *)0 || str == NULL)
+	{
+		str = "(null)";
+	}
+
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
