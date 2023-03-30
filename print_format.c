@@ -18,6 +18,8 @@ int _printf(const char *format, ...)
 	int ret_value;
 	int (*p)(va_list);
 
+	if (format == NULL)
+		return (-1);
 	ret_value = 0;
 	va_start(ap, format);
 	i = 0;
@@ -31,7 +33,6 @@ int _printf(const char *format, ...)
 		else
 		{
 			p = get_func(format[i + 1]);
-
 			if (p == NULL)
 			{
 				_putchar(format[i]);
@@ -45,6 +46,8 @@ int _printf(const char *format, ...)
 		}
 		i = i + 1;
 	}
+	if (format[i - 1] == '%')
+		return(-1);
 	va_end(ap);
 	return (ret_value);
 }
