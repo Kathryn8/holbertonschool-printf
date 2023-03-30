@@ -18,8 +18,10 @@ int _printf(const char *format, ...)
 	int ret_value;
 	int (*p)(va_list);
 
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{
 		return (-1);
+	}
 	ret_value = 0;
 	va_start(ap, format);
 	i = 0;
@@ -46,8 +48,6 @@ int _printf(const char *format, ...)
 		}
 		i = i + 1;
 	}
-	if (format[i - 1] == '%')
-		return(-1);
 	va_end(ap);
 	return (ret_value);
 }
