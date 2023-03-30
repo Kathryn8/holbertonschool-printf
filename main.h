@@ -31,6 +31,7 @@ int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 int (*get_func(char s))(va_list);
 int print_percent(__attribute__((unused))va_list ap);
+int put_count(char c);
 /* 3-helper_functions.c */
 /* 4-helper_functions.c */
 
