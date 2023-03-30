@@ -16,7 +16,6 @@ int _printf(const char *format, ...)
 	va_list ap;
 	int i;
 	int j;
-	int k;
 	int ret_value;
 	csid_t match[] = {
 		{'c', "%c"},
@@ -38,31 +37,23 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			k = 0;
 			j = 0;
 			while (match[j].c != '\0')
 			{
 				if (format[i + 1] == match[j].c)
 				{
-					ret_value += get_func(match[j].str)(ap);
+					ret_value = ret_value + get_func(match[j].str)(ap);
 					i = i + 1;
-					k = 1;
+					break;
 				}
 				else if (format[i + 1] == '%')
 				{
 					_putchar('%');
 					ret_value = ret_value + 1;
 					i = i + 1;
-					k = k + 1;
+					break;
 				}
 				else
-				{
-					ret_value = -1;
-				}
-				if (k == 1)
-				{
-					break;
-				} else
 				{
 					j = j + 1;
 				}
