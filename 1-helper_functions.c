@@ -38,7 +38,7 @@ int print_str(va_list ap)
 	char *str = va_arg(ap, char *);
 	int i = 0;
 
-	if(str == (char *)0 || str == NULL)
+	if (str == (char *)0 || str == NULL)
 	{
 		str = "(null)";
 	}
@@ -67,15 +67,13 @@ int print_int(va_list ap)
 
 	if (x == 0)
 	{
-		_putchar(x + '0');
-		count = count + 1;
+		count = count + put_count(x + '0');
 		return (count);
 	}
 	if (x < 0)
 	{
-		_putchar('-');
 		x = x * (-1);
-		count = count + 1;
+		count = count + put_count('-');
 	}
 	while (i > 0)
 	{
@@ -83,21 +81,18 @@ int print_int(va_list ap)
 		{
 			if (k == 1)
 			{
-				_putchar('0');
-				count = count + 1;
+				count = count + put_count('0');
 			}
-			i = i / 10;
 		}
 		else
 		{
 			z = x - (x % i);
 			x = x - z;
 			z = z / i;
-			i = i / 10;
 			k = 1;
-			_putchar(z + '0');
-			count = count + 1;
+			count = count + put_count(z + '0');
 		}
+		i = i / 10;
 	}
 	return (count);
 }
@@ -118,15 +113,13 @@ int print_decimal(va_list ap)
 
 	if (x == 0)
 	{
-		_putchar(x + '0');
-		count = count + 1;
+		count = count + put_count(x + '0');
 		return (count);
 	}
 	if (x < 0)
 	{
-		_putchar('-');
 		x = x * (-1);
-		count = count + 1;
+		count = count + put_count('-');
 	}
 	while (i > 0)
 	{
@@ -134,21 +127,18 @@ int print_decimal(va_list ap)
 		{
 			if (k == 1)
 			{
-				_putchar('0');
-				count = count + 1;
+				count = count + put_count('0');
 			}
-			i = i / 10;
 		}
 		else
 		{
 			z = x - (x % i);
 			x = x - z;
 			z = z / i;
-			i = i / 10;
 			k = 1;
-			_putchar(z + '0');
-			count = count + 1;
+			count = count + put_count(z + '0');
 		}
+		i = i / 10;
 	}
 	return (count);
 }

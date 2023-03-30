@@ -2,6 +2,19 @@
 #include <stddef.h>
 #include <stdarg.h>
 #include <stdlib.h>
+
+/**
+ * put_count - calls _putchar and increments counter
+ * @c: a character
+ *
+ * Return: 1
+ */
+int put_count(char c)
+{
+	_putchar(c);
+	return (1);
+}
+
 /**
  * _strlen - length of a string
  * @s: takes parameter pointer to a char
