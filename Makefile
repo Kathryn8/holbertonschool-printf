@@ -6,15 +6,21 @@ RM = rm -rf
 
 BETYY = betty $(SRC)
 
-SRC = 1-helper_function.c 2-helper_function.c print_format.c
+SRC1 = 	1-helper_functions.c 2-helper_functions.c print_format.c main.c
 
-OBJ = $(SRC:.c=.o)
+SRC2 =  1-helper_functions.c 2-helper_functions.c print_format.c local_testing.c
 
-NAME = _printf
+NAME1 = _printf
 
-all:
-	$(CC) $(CFLAGS)
-	$(OBJ) $(BETTY) -o $(NAME)
+NAME2 = test
+
+all:	1
+
+1:
+	$(CC) $(CFLAGS) $(SRC1) -o $(NAME1)
+
+test:
+	$(CC) $(CFLAGS) $(SRC2) -o $(NAME2)
 
 clean:
 	$(RM) *~ \#*\# \.\#* \
