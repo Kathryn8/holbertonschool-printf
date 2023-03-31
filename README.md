@@ -24,8 +24,18 @@ Example: <br>
 `make`  this will compile everything including your own main.c <br>
 
 `./_printf` <br>
-`./_printf is the executable that you will run to display the contains of your main.c that you use _printf to display on the command line<br>
+`./_printf` is the executable that you will run to display the contains of your main.c when you use _printf<br>
 
+
+Example of your main.c: <br>
+`#include "main.h"`<br>
+`int main()`<br>
+`{`<br>
+   `_printf("Hello World")`<br>
+   `return(1);`<br>
+ `}`<br>
+
+when you run ./_printf__ the outcome will be `Hello world`
 
 ## Documentation 
 COPY AND SUMMARY OF MAN PAGE
