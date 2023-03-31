@@ -2,6 +2,8 @@
 
 Welcome to the printf project done by the Holberton Students <br>
 <br>
+![giphy](https://user-images.githubusercontent.com/124347057/229031599-d81f7f28-3740-4fa7-b1fa-7e639661288c.gif)
+
 Kathryn Kelly and Bryce Knight.
 
 ## Installation:
