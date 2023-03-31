@@ -38,7 +38,40 @@ Example of your main.c: <br>
 when you run `./_printf` the outcome will be `Hello world`
 
 ## Documentation 
-COPY AND SUMMARY OF MAN PAGE
+### SYNOPSIS         
+      #include <stdio.h>
+      #include “main.h”	
+
+       int _printf(const char *format, ...);               
+### DESCRIPTION         
+     The _printf() function writes output to the standard output stream, according to the format specifiers inside the format string. The subsequent arguments are converted under the control of the format string and its format specifiers. 
+The format string is a string of characters that will all be printed sequentially except for when the following character combinations appear:
+
+### FORMAT SPECIFIERS:
+%c - prints a char or character
+%s - prints a char * or pointer to an array of chars. The array must contain a terminating null byte (‘\0’), and the null byte is not included in the _printf output.
+%i - prints an int or integer
+%d - prints a decimal number or integer in base-10
+
+### FORMAT CONTROLS:
+%% - prints a single %
+\"     double quote
+       \\     backslash
+       \a     alert (BEL)
+       \b     backspace
+       \n     new line
+       \r     carriage return
+       \t     horizontal tab
+       \v     vertical tab
+
+This  _printf function takes no flags and cannot handle field width, precision or length modifiers.
+The number of arguments following the format string must be equal or greater than the number of format specifiers in the format string.  
+
+### RETURN VALUE         
+This function returns an integer value that is equal to the number of characters printed. 
+If a string ends with %, the return value is -1.
+If the format string is NULL the return value is -1.
+
  
 ## Flowchart 
 Below is a flowchart showing the basic implementation of how our function works
