@@ -52,13 +52,13 @@ The subsequent arguments are converted under the control of the format string an
 
 The format string is a string of characters that will all be printed sequentially except for when the following character combinations appear:
 
-#### FORMAT SPECIFIERS:<br>
+#### FORMAT SPECIFIERS
 %c - prints a char or character<br>
 %s - prints a char * or pointer to an array of chars. The array must contain a terminating null byte (‘\0’), and the null byte is not included in the _printf output.<br>
 %i - prints an int or integer<br>
 %d - prints a decimal number or integer in base-10<br>
 
-#### FORMAT CONTROLS:
+#### FORMAT CONTROLS
 %% - prints a single %<br>
 \"     double quote<br>
        \\     backslash<br>
