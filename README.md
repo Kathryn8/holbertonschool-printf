@@ -1,6 +1,6 @@
 # Printf Project
 
-Welcome to the printf project done by the Holberton Students <br>
+Welcome to our printf project done by the Holberton Students <br>
 <br>
 ![giphy](https://user-images.githubusercontent.com/124347057/229031599-d81f7f28-3740-4fa7-b1fa-7e639661288c.gif)
 
@@ -18,7 +18,7 @@ This is the full `git clone` command to clone our repository:<br>
 
 ### Makefile
 Our repository contains a makefile and with file it allows you to compile all of the our code to your own main.c
-with simple command `make`<br> 
+with simple command `make` adn the output is an executable called `./_printf` <br> 
 
 Example: <br>
 `make`  this will compile everything including your own main.c <br>
@@ -35,7 +35,7 @@ Example of your main.c: <br>
    `return(1);`<br>
  `}`<br>
 
-when you run ./_printf__ the outcome will be `Hello world`
+when you run `./_printf` the outcome will be `Hello world`
 
 ## Documentation 
 COPY AND SUMMARY OF MAN PAGE
