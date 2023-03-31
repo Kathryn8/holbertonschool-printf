@@ -4,29 +4,31 @@ Welcome to the printf project done by the Holberton Students <br>
 <br>
 ![giphy](https://user-images.githubusercontent.com/124347057/229031599-d81f7f28-3740-4fa7-b1fa-7e639661288c.gif)
 
-Kathryn Kelly and Bryce Knight.
+Kathryn Kelly and Bryce Knight.<br>
+Team kat-and-myce.
 
 ## Installation:
 
-To install this function yourself you are going to be cloning our repo use the command `git clone`.
-with this `git clone` we add the url this the repository.
+To install this function yourself you are going to be cloning our repository
+by using the command `git clone`. <br>
 
-Example:
-
+This is the full `git clone` command to clone our repository:<br>
 `git clone https://github.com/Kathryn8/holbertonschool-printf.git`
 <br>
 
 ### Makefile
-Our repo contains a makefile and with this command you can easily compile all of the our code to your own main.c
-and run the exe ./__printf_ 
+Our repository contains a makefile and with file it allows you to compile all of the our code to your own main.c
+with simple command `make`<br> 
 
 Example: <br>
-`make` <br>
-`./_print.f` <br>
-`Prints the contains that you want to be printed in your main.c` <br>
+`make`  this will compile everything including your own main.c <br>
+
+`./_printf` <br>
+`./_printf is the executable that you will run to display the contains of your main.c that you use _printf to display on the command line<br>
+
 
 ## Documentation 
- COPY AND SUMMARY OF MAN PAGE
+COPY AND SUMMARY OF MAN PAGE
  
 ## Flowchart 
 Below is a flowchart showing the basic implementation of how our function works
