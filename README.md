@@ -16,6 +16,15 @@ Example:
 `git clone https://github.com/Kathryn8/holbertonschool-printf.git`
 <br>
 
+### Makefile
+Our repo contains a makefile and with this command you can easily compile all of the our code to your own main.c
+and run the exe ./__printf_ 
+
+Example: <br>
+`make` <br>
+`./_print.f` <br>
+`Prints the contains that you want to be printed in your main.c` <br>
+
 ## Documentation 
  COPY AND SUMMARY OF MAN PAGE
  
