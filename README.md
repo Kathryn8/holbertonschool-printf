@@ -18,7 +18,7 @@ This is the full `git clone` command to clone our repository:<br>
 
 #### Makefile
 Our repository contains a makefile and with file it allows you to compile all of the our code to your own main.c
-with simple command `make` adn the output is an executable called `./_printf` <br> 
+with simple command `make` and the output is an executable called `./_printf` <br> 
 
 Example: <br>
 `make`  this will compile everything including your own main.c <br>
@@ -28,12 +28,14 @@ Example: <br>
 
 
 Example of your main.c: <br>
-`#include "main.h"`<br>
-`int main()`<br>
-`{`<br>
-   `_printf("Hello World")`<br>
-   `return(1);`<br>
- `}`<br>
+```C
+#include "main.h"
+int main()
+{
+   _printf("Hello World")
+   return(1);
+}
+```
 
 when you run `./_printf` the outcome will be `Hello world`
 
@@ -41,11 +43,10 @@ when you run `./_printf` the outcome will be `Hello world`
 
 
 #### SYNOPSIS
-   #include <stdio.h> <br>
-   #include “main.h”	<br>
+Prototype:
 
-   int _printf(const char *format, ...);<br>
-                  
+  ` int _printf(const char *format, ...);`
+
 #### DESCRIPTION
 The _printf() function writes output to the standard output stream, according to the format specifiers inside the format string.
 The subsequent arguments are converted under the control of the format string and its format specifiers.<br> 
@@ -72,13 +73,13 @@ The format string is a string of characters that will all be printed sequentiall
 This  _printf function takes no flags and cannot handle field width, precision or length modifiers.
 The number of arguments following the format string must be equal or greater than the number of format specifiers in the format string.  
 
-#### RETURN VALUE         
+#### RETURN VALUE
 This function returns an integer value that is equal to the number of characters printed. 
 If a string ends with %, the return value is -1.
 If the format string is NULL the return value is -1.
 
- 
-## Flowchart 
+
+## Flowchart
 Below is a flowchart showing the basic implementation of how our function works
 and the steps the function goes through to return the desired result.
 ##
