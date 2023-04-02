@@ -17,17 +17,17 @@ This is the full `git clone` command to clone our repository:<br>
 <br>
 
 #### Makefile
-Our repository contains a makefile and with file it allows you to compile all of the our code to your own main.c
-with simple command `make` and the output is an executable called `./_printf` <br> 
+Our repository contains a makefile, and with file it allows you to compile all of the our code to your own main.c
+with simple command `make` and when you do this it will create an executable called `./_printf` <br> 
 
 Example: <br>
-`make`  this will compile everything including your own main.c <br>
+using the command `make` this will compile everything including your own main.c <br>
 
 `./_printf` is the executable that you will run to display the contains of your main.c when you use _printf<br>
 
 
 Example of your main.c: <br>
-```C
+```
 #include "main.h"
 int main()
 {
