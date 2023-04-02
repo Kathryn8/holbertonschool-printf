@@ -54,29 +54,28 @@ The subsequent arguments are converted under the control of the format string an
 The format string is a string of characters that will all be printed sequentially except for when the following character combinations appear:
 
 #### FORMAT SPECIFIERS
-%c - prints a char or character<br>
-%s - prints a char * or pointer to an array of chars. The array must contain a terminating null byte (‘\0’), and the null byte is not included in the _printf output.<br>
-%i - prints an int or integer<br>
-%d - prints a decimal number or integer in base-10<br>
+`%c`   prints a char or character<br>
+`%s`   prints a char * or pointer to an array of chars. The array must contain a terminating null byte (‘\0’), and the null byte is not included in the _printf output.<br>
+`%i`   prints an int or integer<br>
+`%d`   prints a decimal number or integer in base-10<br>
 
 #### FORMAT CONTROLS
-%% - prints a single %<br>
-\"     double quote<br>
-       \\     backslash<br>
-       \a     alert (BEL)<br>
-       \b     backspace<br>
-       \n     new line<br>
-       \r     carriage return<br>
-       \t     horizontal tab<br>
-       \v     vertical tab<br>
+`%%`   prints a single %<br>
+`\"`   double quote<br>
+`\\`   backslash<br>
+`\a`   alert (BEL)<br>
+`\b`   backspace<br>
+`\n`   new line<br>
+`\r`   carriage return<br>
+`\t`   horizontal tab<br>
+`\v`   vertical tab<br>
 
-This  _printf function takes no flags and cannot handle field width, precision or length modifiers.
+This _printf function takes no flags and cannot handle field width, precision or length modifiers.
 The number of arguments following the format string must be equal or greater than the number of format specifiers in the format string.  
 
 #### RETURN VALUE
 This function returns an integer value that is equal to the number of characters printed. 
-If a string ends with %, the return value is -1.
-If the format string is NULL the return value is -1.
+If a string ends with % or the format string is NULL, the return value is -1.
 
 
 ## Flowchart
