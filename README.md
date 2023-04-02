@@ -23,7 +23,6 @@ with simple command `make` and the output is an executable called `./_printf` <b
 Example: <br>
 `make`  this will compile everything including your own main.c <br>
 
-`./_printf` <br>
 `./_printf` is the executable that you will run to display the contains of your main.c when you use _printf<br>
 
 
@@ -37,7 +36,12 @@ int main()
 }
 ```
 
-when you run `./_printf` the outcome will be `Hello world`
+When you run `./_printf` the outcome will be `Hello world`.
+
+If you would like to use our testing main.c, then rename the local_testing file (found in the repository) to main.c.
+
+To see the manual page for this function, type the following into the command line:
+`man ./man_3_printf`
 
 ## Documentation
 
