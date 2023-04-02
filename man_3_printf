@@ -1,0 +1,82 @@
+	_PRINTF(3)			Manual Page
+
+NAME
+
+	printf - print a formatted string
+
+SYNOPSIS
+
+	#include <stdio.h>
+      	#include “main.h”
+
+      	int _printf(const char *format, ...);
+
+DESCRIPTION
+
+The _printf() function writes output to the standard output stream, according to the format specifiers inside the format string. The subsequent arguments are converted under the control of the format string and its format specifiers. 
+
+The format string is a string of characters that will all be printed sequentially except for when the following character combinations appear:
+
+FORMAT SPECIFIERS:
+
+	%c      prints a char or character
+       	%s	prints a char * or pointer to an array of chars.\n
+		The array must contain a terminating null byte\n
+		(‘\0’), and the null byte is not included in the\n
+		_printf output.
+       	%i	prints an int or integer
+       	%d	prints a decimal number or integer in base-10
+
+FORMAT CONTROLS:
+
+	%%     prints a single %
+       	\\"     double quote
+       	\\\\     backslash
+       	\\a     alert (BEL)
+       	\\b     backspace
+       	\\n     new line
+       	\\r     carriage return
+       	\\t     horizontal tab
+       	\\v     vertical tab
+
+This  _printf function takes no flags and cannot handle field width, precision or length modifiers. The number of arguments following the format string must be equal or greater than the number of format specifiers in the format string.  
+
+RETURN VALUE
+
+This function returns an integer value that is equal to the number of characters printed.
+If a string ends with % or the format string is NULL, the return value is -1.
+
+ATTRIBUTES
+
+Attributes are not implemented in this version of _printf.
+
+EXAMPLES
+
+To print “Loading ... 99% Please wait”:
+
+_printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+
+To print “There is 1024 bytes in 1 KB”:
+
+_printf("There is %i bytes in %i KB\n", 1024, 1);
+
+
+SEE ALSO
+
+	man printf(3)
+
+BUGS
+
+There are no bugs. This function works perfectly as intended.
+
+AUTHOR
+
+To contact the authors of this page and to review the _printf code or submit pull requests, please visit:
+      	https://github.com/Kathryn8/holbertonschool-printf
+      	https://github.com/BryceKnight16/holbertonschool-printf
+
+COPYRIGHT
+
+This printf was created for educational purposes under the framework and guidance of Holberton School, Melbourne Australia. 
+
+      	    2023-03-31                      PRINTF(3)
